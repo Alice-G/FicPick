@@ -1,0 +1,9 @@
+// where you import styles from the other sass files 
+// i'm supposed to be using @use now but it doesn't work 
+// because apparently it needs dart-sass to run even though normal sass will discontinue support for @import 
+
+@import 'base';
+@import 'components';
+@import 'globals';
+@import 'layout';
+// @import 'pages';

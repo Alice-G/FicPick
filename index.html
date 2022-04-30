@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <title>FicPick</title>
+</head>
+<body>
+    <div class='wrapper'>
+
+        <form id='ficForm'>
+          <div class="inputWrapper">
+            <div class='ficMin'>
+              <label for='minNum'>The fics range from</label>
+              <input type='text' id='minNum' maxlength='15' onkeypress="return /[0-9]/i.test(event.key)">
+            </div>
+      
+            <div class='ficMax'>
+              <label for='minMax'>to</label>
+              <input type='text' id='minMax' maxlength='15' onkeypress="return /[0-9]/i.test(event.key)">
+            </div>
+          </div>
+      
+          <div class='form-sub'>
+            <button id='subButton' type='button' onclick="myfunc()" >Me! Me! Click me!</button>
+          </div>
+        </form>
+      
+        <div>
+          <p id='result'></p>
+        </div>
+      </div>
+</body>
+</html>

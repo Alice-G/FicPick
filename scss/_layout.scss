@@ -1,0 +1,32 @@
+// nav, header, footer, sidebar, etc...
+
+
+// .wrapper {
+// }
+
+#ficForm {
+  border: 1px solid green;
+
+}
+.inputWrapper {
+    display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+}
+.ficMin {
+  border: 1px dashed fuchsia;
+/*   width: 49%; */
+}
+.ficMax {
+  border: 1px dashed blue;
+  padding-left:4px;
+/*    width: 49%; */
+}
+input[type=number], input[type=text] {
+  background-color: peachpuff;
+  width:30px;
+}
+button {
+/*   width: 50%; */
+  margin: 0 auto;
+}
