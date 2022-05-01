@@ -1,1 +1,19 @@
 // reset, mports fonts, etc...
+@import url('https://fonts.googleapis.com/css2?family=Flavors&family=Radio+Canada&display=swap');
+
+* {
+    font-family: 'Radio Canada', sans-serif;
+}
+
+h1 {
+    font-family: 'Flavors', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    color: bisque;
+}
+
+label {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+}

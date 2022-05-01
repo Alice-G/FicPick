@@ -1,32 +1,79 @@
 // nav, header, footer, sidebar, etc...
 
+html {
+  background: rgb(87,87,87);
+  background: radial-gradient(circle, rgba(87,87,87,1) 0%, rgba(52,52,52,1) 100%);
 
-// .wrapper {
-// }
 
-#ficForm {
-  border: 1px solid green;
+
+  .wrapper {
+    h1 {
+      text-align: center;
+    }
+
+    #ficForm {
+      margin: 0 auto;
+      border: 1px solid green;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .inputWrapper {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        border: 3px dashed sienna;
+        // width: 253px;
+        .ficMin {
+          border: 1px dashed fuchsia;
+          /*   width: 49%; */
+        }
+        .ficMax {
+          border: 1px dashed blue;
+          padding-left:4px;
+        /*    width: 49%; */
+        }
+        input[type=number], input[type=text] {
+          background-color: whitesmoke;
+          width:30px;
+        }
+      }
+      button {
+        /*   width: 50%; */
+          margin: 0 auto;
+      }
+    }
 
 }
-.inputWrapper {
-    display: flex;
-  flex-direction: row; 
-  flex-wrap: wrap;
+
 }
-.ficMin {
-  border: 1px dashed fuchsia;
-/*   width: 49%; */
-}
-.ficMax {
-  border: 1px dashed blue;
-  padding-left:4px;
-/*    width: 49%; */
-}
-input[type=number], input[type=text] {
-  background-color: peachpuff;
-  width:30px;
-}
-button {
-/*   width: 50%; */
-  margin: 0 auto;
-}
+
+
+
+
+
+
+// <div class='wrapper'>
+// <h1>Fantabulous Fic Randomizer</h1>
+//   <form id='ficForm'>
+//     <div class="inputWrapper">
+//       <div class='ficMin'>
+//         <label for='minNum'>The fics range from</label>
+//         <input type='text' id='minNum' maxlength='15' onkeypress="return /[0-9]/i.test(event.key)">
+//       </div>
+
+//       <div class='ficMax'>
+//         <label for='minMax'>to</label>
+//         <input type='text' id='minMax' maxlength='15' onkeypress="return /[0-9]/i.test(event.key)">
+//       </div>
+//     </div>
+
+//     <div class='form-sub'>
+//       <button id='subButton' type='button' onclick="myfunc()" >Me! Me! Click me!</button>
+//     </div>
+//   </form>
+
+//   <div>
+//     <p id='result'></p>
+//   </div>
+// </div>

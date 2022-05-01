@@ -1,8 +1,47 @@
-#ficForm {
-  border: 1px solid green;
+@import url("https://fonts.googleapis.com/css2?family=Flavors&family=Radio+Canada&display=swap");
+* {
+  font-family: 'Radio Canada', sans-serif;
 }
 
-.inputWrapper {
+h1 {
+  font-family: 'Flavors', cursive;
+  font-weight: normal;
+  font-size: 50px;
+  color: bisque;
+}
+
+label {
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+html {
+  background: #575757;
+  background: radial-gradient(circle, #575757 0%, #343434 100%);
+}
+
+html .wrapper h1 {
+  text-align: center;
+}
+
+html .wrapper #ficForm {
+  margin: 0 auto;
+  border: 1px solid green;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .wrapper #ficForm .inputWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,25 +51,26 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border: 3px dashed sienna;
 }
 
-.ficMin {
+html .wrapper #ficForm .inputWrapper .ficMin {
   border: 1px dashed fuchsia;
   /*   width: 49%; */
 }
 
-.ficMax {
+html .wrapper #ficForm .inputWrapper .ficMax {
   border: 1px dashed blue;
   padding-left: 4px;
   /*    width: 49%; */
 }
 
-input[type=number], input[type=text] {
-  background-color: peachpuff;
+html .wrapper #ficForm .inputWrapper input[type=number], html .wrapper #ficForm .inputWrapper input[type=text] {
+  background-color: whitesmoke;
   width: 30px;
 }
 
-button {
+html .wrapper #ficForm button {
   /*   width: 50%; */
   margin: 0 auto;
 }
