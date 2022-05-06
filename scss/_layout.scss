@@ -1,10 +1,9 @@
 // nav, header, footer, sidebar, etc...
 
 html {
-  background: rgb(87,87,87);
-  background: radial-gradient(circle, rgba(87,87,87,1) 0%, rgba(52,52,52,1) 100%);
-
-
+  background: rgb(18,15,15);
+  background: linear-gradient(333deg, #120f0f 0%, rgba(32,0,0,1) 85%, rgba(82,0,0,1) 100%);
+  height: 100%;
 
   .wrapper {
     h1 {
@@ -13,41 +12,63 @@ html {
 
     #ficForm {
       margin: 0 auto;
-      border: 1px solid green;
-      width: 300px;
+      width: 45%;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      padding: 30px;
+
+      background-color: $color-form-background;
+      border-radius: 20px;
+      
+
       .inputWrapper {
         display: flex;
         flex-direction: row; 
         flex-wrap: wrap;
-        border: 3px dashed sienna;
-        // width: 253px;
+
+        justify-content: center;
+        width: 90%;
+        padding-bottom: 20px;
+
+        color: $color-form-font;
+        font-size: 18px;
+        font-weight: 400;
+
+
+        border: 1px dashed sienna;
+
+       
+
         .ficMin {
+
+
           border: 1px dashed fuchsia;
           /*   width: 49%; */
         }
         .ficMax {
           border: 1px dashed blue;
-          padding-left:4px;
+          padding-left:5px;
         /*    width: 49%; */
         }
         input[type=number], input[type=text] {
-          background-color: whitesmoke;
-          width:30px;
+          background-color: $color-form-field-background;
+          width:35px;
+          border-radius: 7px;
         }
       }
-      button {
-        /*   width: 50%; */
-          margin: 0 auto;
+      #subButton {
+        margin: 0 auto;
+        @include button;
+        
       }
     }
 
 }
 
 }
-
 
 
 

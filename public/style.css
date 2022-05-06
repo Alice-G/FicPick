@@ -1,24 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Flavors&family=Radio+Canada&display=swap");
+@font-face {
+  font-family: 'Sell Your Soul';
+  src: url(/public/font/SellYourSoul.ttf) format("truetype");
+}
+
 * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Radio Canada', sans-serif;
 }
 
 h1 {
-  font-family: 'Flavors', cursive;
+  font-family: 'Sell Your Soul', Times, serif;
   font-weight: normal;
   font-size: 50px;
-  color: bisque;
-}
-
-label {
-  color: white;
-  font-size: 16px;
-  font-weight: normal;
+  color: #d1c4ff;
 }
 
 html {
-  background: #575757;
-  background: radial-gradient(circle, #575757 0%, #343434 100%);
+  background: #120f0f;
+  background: linear-gradient(333deg, #120f0f 0%, #200000 85%, #520000 100%);
+  height: 100%;
 }
 
 html .wrapper h1 {
@@ -27,8 +29,8 @@ html .wrapper h1 {
 
 html .wrapper #ficForm {
   margin: 0 auto;
-  border: 1px solid green;
-  width: 300px;
+  width: 45%;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +41,9 @@ html .wrapper #ficForm {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
 }
 
 html .wrapper #ficForm .inputWrapper {
@@ -51,7 +56,15 @@ html .wrapper #ficForm .inputWrapper {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border: 3px dashed sienna;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px dashed sienna;
 }
 
 html .wrapper #ficForm .inputWrapper .ficMin {
@@ -61,17 +74,23 @@ html .wrapper #ficForm .inputWrapper .ficMin {
 
 html .wrapper #ficForm .inputWrapper .ficMax {
   border: 1px dashed blue;
-  padding-left: 4px;
+  padding-left: 5px;
   /*    width: 49%; */
 }
 
 html .wrapper #ficForm .inputWrapper input[type=number], html .wrapper #ficForm .inputWrapper input[type=text] {
-  background-color: whitesmoke;
-  width: 30px;
+  background-color: #2b2b2b;
+  width: 35px;
+  border-radius: 7px;
 }
 
-html .wrapper #ficForm button {
-  /*   width: 50%; */
+html .wrapper #ficForm #subButton {
   margin: 0 auto;
+  font-family: 'Radio Canada', sans-serif;
+  font-size: 16px;
+  border: none;
+  background-color: #5167f7;
+  padding: 9px 20px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

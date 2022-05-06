@@ -1,1 +1,19 @@
 // variables, functions, mixins
+
+// colors
+$color-button: #5167f7;
+$color-form-font: #fff;
+$color-form-field-background: #2b2b2b;
+$color-form-background: rgba(0,0,0, 0.7);
+
+
+//mixins
+//button
+@mixin button {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 16px;
+    border: none;
+    background-color: $color-button;
+    padding: 9px 20px;
+    border-radius: 10px;
+}
