@@ -1,22 +1,16 @@
 // reset, mports fonts, etc...
-@import url('https://fonts.googleapis.com/css2?family=Flavors&family=Radio+Canada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Radio+Canada:wght@300&display=swap');
+
 
 @font-face {
     font-family: 'Sell Your Soul';
     src: url(/public/font/SellYourSoul.ttf)  format("truetype") ;
 }
 
-* {
+*, *:before, *:after  {
     box-sizing: border-box;
-    font-family: 'Radio Canada', sans-serif;
 }
 
-h1 {
-    // font-family: 'Flavors', cursive;
-    font-family: 'Sell Your Soul', Times, serif;
-    font-weight: normal;
-    font-size: 50px;
-    color: rgb(209, 196, 255);
-}
+
 
 

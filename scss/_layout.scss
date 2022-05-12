@@ -4,97 +4,147 @@ html {
   background: rgb(18,15,15);
   background: linear-gradient(333deg, #120f0f 0%, rgba(32,0,0,1) 85%, rgba(82,0,0,1) 100%);
   height: 100%;
-
   .wrapper {
-    h1 {
-      text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    height: 290px; // make it taller for narrower screens
+    background-color: $color-form-background;
+    border-radius: 20px;
+
+    @include for-phone-smallest {
+     height: 210px;
+     width: 95%;
     }
+    @include for-phone-landscape {
+      width: 95%;
+      height: 230px;
+    }
+    @include for-tablet-portrait-up {
+      width: 70%;
+    }
+    // border: 2px dashed darksalmon;
 
     #ficForm {
-      margin: 0 auto;
-      width: 45%;
-      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 40px 30px 20px 30px;
 
-      padding: 30px;
-
-      background-color: $color-form-background;
-      border-radius: 20px;
+      @include for-phone-smallest {
+        padding: 20px 2px 20px 2px;
+      }
+      @include for-phone-landscape {
+        padding: 25px 2px 20px 2px;
+      }
       
+      // border: 2px dashed skyblue;
 
       .inputWrapper {
         display: flex;
         flex-direction: row; 
         flex-wrap: wrap;
-
         justify-content: center;
         width: 90%;
-        padding-bottom: 20px;
-
+        padding-bottom: 40px;
         color: $color-form-font;
         font-size: 18px;
         font-weight: 400;
 
-
-        border: 1px dashed sienna;
-
-       
-
+        @include for-phone-smallest {
+          font-size: 15px;
+          padding-bottom: 15px;
+        }
+        @include for-phone-landscape {
+          font-size: 16px;
+          padding-bottom: 15px;
+        }
+        @include for-tablet-portrait-up {
+          padding-bottom: 25px;
+        }
+        // border: 1px dashed sienna;
         .ficMin {
+          display: flex;
+          flex-direction: row;
+          justify-items: center;
+          font-family:$font-basic-text;
 
-
-          border: 1px dashed fuchsia;
-          /*   width: 49%; */
+          // border: 1px dashed fuchsia;
         }
         .ficMax {
-          border: 1px dashed blue;
-          padding-left:5px;
-        /*    width: 49%; */
+          display: flex;
+          flex-direction: row;
+          justify-items: center;
+          font-family:$font-basic-text;
+          padding-left: 5px;
+
+          // border: 1px dashed blue;
         }
         input[type=number], input[type=text] {
           background-color: $color-form-field-background;
           width:35px;
-          border-radius: 7px;
+          height: 25px;
+          border: none;
+          border-radius: 8px; 
+          color: $color-form-font;
+          font-family: $font-basic-text;
+          margin-left: 5px;
+
+          @include for-phone-smallest {
+           height: 20px;
+          }
+          @include for-phone-landscape {
+           height: 20px;
+          }
+          &:hover {
+            border-bottom: 1px solid grey;
+          }
+          &:focus, &:active {
+            outline: none;
+            // color: white;
+            border: 1px solid $color-button; 
+          }
         }
       }
       #subButton {
         margin: 0 auto;
         @include button;
-        
       }
     }
+    .lower-half {
+      height: 125px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
 
+      @include for-phone-smallest {
+        height: 80px;
+      }
+      @include for-phone-landscape {
+        height: 100px;
+      }
+   
+
+      // border: 1px dashed lime;
+      #result {
+        font-family: $font-basic-text;
+        font-size: 16px;
+        text-align: center;
+        color: $color-result-text;
+        width: 80%;
+        margin: auto;
+
+        @include for-phone-smallest {
+          font-size: 13px;
+          width: 90%;
+        }
+        @include for-phone-landscape {
+          width: 90%;
+          font-size: 15px;
+      }
+        // border: 2px dashed green;
+      }
+    }
+  }
 }
 
-}
-
-
-
-
-
-// <div class='wrapper'>
-// <h1>Fantabulous Fic Randomizer</h1>
-//   <form id='ficForm'>
-//     <div class="inputWrapper">
-//       <div class='ficMin'>
-//         <label for='minNum'>The fics range from</label>
-//         <input type='text' id='minNum' maxlength='15' onkeypress="return /[0-9]/i.test(event.key)">
-//       </div>
-
-//       <div class='ficMax'>
-//         <label for='minMax'>to</label>
-//         <input type='text' id='minMax' maxlength='15' onkeypress="return /[0-9]/i.test(event.key)">
-//       </div>
-//     </div>
-
-//     <div class='form-sub'>
-//       <button id='subButton' type='button' onclick="myfunc()" >Me! Me! Click me!</button>
-//     </div>
-//   </form>
-
-//   <div>
-//     <p id='result'></p>
-//   </div>
-// </div>

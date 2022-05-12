@@ -1,19 +1,75 @@
 // variables, functions, mixins
 
 // colors
-$color-button: #5167f7;
+// $color-button: #5167f7;
 $color-form-font: #fff;
-$color-form-field-background: #2b2b2b;
+$color-form-field-background: rgb(66, 66, 66);
 $color-form-background: rgba(0,0,0, 0.7);
+$color-button: #e22d2d;
+$color-button-hover: lighten($color-button, 7%);
+$color-button-text: rgb(0,0,0);
+$color-result-text: #fff;
 
+$font-title: 'Sell Your Soul', Times, serif;
+$font-sub-title: 'Macondo', cursive;
+$font-basic-text:'Radio Canada', sans-serif;
 
 //mixins
 //button
 @mixin button {
-    font-family: 'Radio Canada', sans-serif;
+    font-family: $font-basic-text;
     font-size: 16px;
     border: none;
     background-color: $color-button;
     padding: 9px 20px;
     border-radius: 10px;
+    color: $color-button-text;
+
+    @include for-phone-smallest {
+        font-size: 15px;
+        padding: 6px 12px;
+      }
+    @include for-phone-landscape {
+        margin-top: 3px;
+    }
+    &:hover {
+        background-color: $color-button-hover;
+    }
 }
+
+
+
+
+
+
+
+
+//                      BREAKPOINTS
+
+// for-phone-smallest | 350px for-phone-landscape | 600px for-tablet-portrait-up | 900px for-tablet-landscape-up | 1200px for-desktop-up | 1800px for-big-desktop-up 
+
+@mixin for-phone-smallest {
+    @media screen and (max-width: 349px) { 
+        @content; }
+}
+@mixin for-phone-landscape {
+    @media screen and (min-width: 350px) and (max-width: 599px){ 
+        @content; }
+}
+  @mixin for-tablet-portrait-up {
+    @media screen and (min-width: 600px) and (max-width: 899px) { 
+        @content; }
+}
+  @mixin for-tablet-landscape-up {
+    @media screen and (min-width: 900px) and (max-width: 1199px) { 
+        @content; }
+  }
+  @mixin for-desktop-up {
+    @media screen and (min-width: 1200px) and (max-width: 1799px) { 
+        @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media screen and (min-width: 1800px) { 
+        @content; }
+  }
+  

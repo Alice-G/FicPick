@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/style.css">
-    <!-- <script src="script.js"></script>   LATER -->
-    
-    <link rel="icon" type="image/x-icon" href="/public/img/mol_16x16.webp">
-    <title>FicPick</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/style.css">
+  <script src="script.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="/public/img/mol_16x16.webp">
+  <title>FicPick</title>
 
 
 
 </head>
+
 <body>
-    <div class='wrapper'>
-      <h1>Fantabulous Fic Mixer</h1>
-        <form id='ficForm'>
-          <div class="inputWrapper">
-            <div class='ficMin'>
-              <label for='minNum'>The fics range from</label>
-              <input type='text' id='minNum' maxlength='15'>
-            </div>
-      
-            <div class='ficMax'>
-              <label for='minMax'>to</label>
-              <input type='text' id='minNum' maxlength='15'>
-            </div>
-          </div>
-      
-          <div class='form-sub'>
-            <button id='subButton' type='button' onclick="myfunc()" >Me! Me! Click me!</button>
-          </div>
-        </form>
-      
-        <div>
-          <p id='result'></p>
+  <div class="hero-container">
+    <div class="environment"></div>
+    <h1 class="hero glitch layers" data-text="Fantabulous Fic Mixer">Fantabulous Fic Mixer</h1>
+  </div>
+  </section>
+
+  <h2>What are we reading today?</h2>
+  <div class='wrapper'>
+    <form id='ficForm' autocomplete="off">
+      <div class="inputWrapper">
+        <div class='ficMin'>
+          <label for='minNum'>The fics range from</label>
+          <input type='text' id='minNum' maxlength='15'>
+        </div>
+
+        <div class='ficMax'>
+          <label for='minMax'>to</label>
+          <input type='text' id='maxNum' maxlength='15'>
         </div>
       </div>
+
+      <div class='form-sub'>
+        <button id='subButton' type='button' onclick="pickfic()">Me! Me! Click me!</button>
+      </div>
+    </form>
+
+    <div class="lower-half">
+      <p id='result'></p>
+    </div>
+  </div>
 </body>
+
 </html>
